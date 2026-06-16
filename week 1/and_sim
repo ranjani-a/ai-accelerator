@@ -1,0 +1,56 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000165d2f05160 .scope module, "and_gate_tb" "and_gate_tb" 2 1;
+ .timescale 0 0;
+v00000165d2f05480_0 .var "a", 0 0;
+v00000165d2f05520_0 .var "b", 0 0;
+v00000165d304bc60_0 .net "y", 0 0, L_00000165d2ed2eb0;  1 drivers
+S_00000165d2f052f0 .scope module, "dut" "and_gate" 2 7, 3 1 0, S_00000165d2f05160;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_00000165d2ed2eb0 .functor AND 1, v00000165d2f05480_0, v00000165d2f05520_0, C4<1>, C4<1>;
+v00000165d2ed30d0_0 .net "a", 0 0, v00000165d2f05480_0;  1 drivers
+v00000165d30481f0_0 .net "b", 0 0, v00000165d2f05520_0;  1 drivers
+v00000165d2ed2c30_0 .net "y", 0 0, L_00000165d2ed2eb0;  alias, 1 drivers
+    .scope S_00000165d2f05160;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "and.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000165d2f05160 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000165d2f05480_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000165d2f05520_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000165d2f05480_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000165d2f05520_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000165d2f05480_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000165d2f05520_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000165d2f05480_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000165d2f05520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 30 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb/and_gate_tb.v";
+    "rtl/and_gate.v";
