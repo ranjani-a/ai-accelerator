@@ -1,0 +1,68 @@
+$date
+	Tue Jul 07 17:58:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module signed_multiplier4_tb $end
+$var wire 8 ! product [7:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$scope module DUT $end
+$var wire 4 $ a [3:0] $end
+$var wire 4 % b [3:0] $end
+$var wire 8 & product [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b110 &
+b10 %
+b11 $
+b10 #
+b11 "
+b110 !
+$end
+#10000
+b11 #
+b11 %
+b11111010 !
+b11111010 &
+b1110 "
+b1110 $
+#20000
+b1110 #
+b1110 %
+b110 !
+b110 &
+b1101 "
+b1101 $
+#30000
+b1 #
+b1 %
+b11111000 !
+b11111000 &
+b1000 "
+b1000 $
+#40000
+b1111 #
+b1111 %
+b11111001 !
+b11111001 &
+b111 "
+b111 $
+#50000
+b1110 #
+b1110 %
+b1000 !
+b1000 &
+b1100 "
+b1100 $
+#60000
